@@ -1,7 +1,7 @@
 # React Native Lab 1
 
 ### To follow along
-Welcome to our crash course on how to create a mobile app with React Native! Today's lab has four parts. You can check it out [here](https://www.notion.so/snapacademies/Day-2-July-7-2021-6f88934bc9944983bcf0535ada34d752). 
+Welcome to our crash course on how to create a mobile app with React Native! Today's lab has four parts. You can check it out [here](https://github.com/Snap-Engineering-Academy-2022/react_native_lab1_instructions). 
 
 ### To run 
 1. Fork this repo! 
