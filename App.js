@@ -1,18 +1,31 @@
 import * as React from "react";
-import { Text, View, StyleSheet, Image } from "react-native";
+import { Text, View, StyleSheet, Image, ScrollView } from "react-native";
+import { Button } from "react-native-web";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.photoContainer}>
-        <Image source={require("./assets/perry.png")} style={styles.photo} />
+      <View style={styles.profileContainer}>
+        <Image source={require("./assets/profile.jpeg")} style={styles.photo} />
+        <View style={styles.profileInfo}>
+          <Text style={styles.name}>Sonya</Text>
+          <Text style={styles.desc}>Developer & Designer</Text>
+          <View style={styles.linkLogos}>
+            <Image source={require("./assets/linkedin.png")} style={styles.logo}/>
+            <Image source={require("./assets/github-logo.png")} style={styles.logo}/>
+            <Image source={require("./assets/website.png")} style={styles.logo}/>
+            {/* <Button>ddd</Button> */}
+          </View>
+        </View>
       </View>
-      <View style={styles.nameContainer}>
-        <Text style={styles.nameAndPronouns}>Perry (she/her)</Text>
-      </View>
-      <View style={styles.blurbContainer}>
-        <Text style={styles.blurb}>chirp chirp i'm a parakeet</Text>
-      </View>
+      <ScrollView style={styles.blurbContainer}>
+        <Text style={styles.blurb}>South Korean</Text>
+        <Text style={styles.blurb}>Lonely Single</Text>
+        <Text style={styles.blurb}>26 Years Old</Text>
+        <Text style={styles.blurb}>Snap Engineering Academy Scholar</Text>
+        <Text style={styles.blurb}>El Camino Communtiy College</Text>
+        <Text style={styles.blurb}>Sungshin Women's University</Text>
+      </ScrollView>
     </View>
   );
 }
@@ -21,30 +34,35 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  photoContainer: {
-    flex: 3,
+  profileContainer: {
+    flex: 1,
+    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "yellow",
-    padding: 30,
   },
-  nameContainer: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+  profileInfo: {
+    flexDirection: "column",
+    width: "40%",
   },
-  blurbContainer: {
-    flex: 2,
-    justifyContent: "center",
-    alignItems: "center",
+  name: {
+    fontSize: 30,
   },
   photo: {
-    resizeMode: "contain",
-    width: "90%",
-    padding: 50,
+    borderRadius: 100,
+    // resizeMode: "contain",
+    width: 150,
+    height: 150,
+    margin: 10,
   },
-  nameAndPronouns: {
-    fontSize: 50,
+  linkLogos: {
+    flexDirection: "row",
+  },
+  logo: {
+    width: 30,
+    height: 30,
+    marginTop: 10,
+    marginRight: 10,
   },
   blurb: {
     fontSize: 20,
